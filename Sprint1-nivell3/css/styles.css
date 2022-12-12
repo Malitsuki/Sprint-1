@@ -1,0 +1,368 @@
+.firstBlock{
+   
+    background-image: url(../img/header.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: repeat(5, auto) ;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: 
+        "pagoda lista lista lista linkos"
+        "none none none none none"
+        "nadauno frase frase frase nadados";
+    margin: 20px;
+    
+    box-sizing: border-box;
+    
+}
+.a{
+    grid-area: pagoda;
+    
+}
+.a img{
+    width: 7em;
+    text-align: center;
+    margin: 10px;
+    animation: firstMove 1s ease-in;
+}
+.b{
+    grid-area: lista;
+    font-size: 2rem;
+    color: #808080;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.b ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px;
+    
+    
+}
+.b ul li{
+    padding-right: 30px;
+    font-size: 1.2rem;
+    
+}
+.b ul li i{
+    padding-right:  10px;
+}
+li:hover {
+    color: #f08080;
+    cursor: pointer; 
+}
+.c{
+    grid-area: linkos;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 40px;
+    color: #808080;
+    
+}
+.c i{
+    padding-right: 40px;
+    font-size: 2rem;
+    
+    
+}
+.c i:hover {
+    color: #f08080;
+    cursor: pointer;  
+}
+.FBDown{
+    grid-area: frase;
+    background-color: rgba(128, 128, 128, 0.2);
+    padding-bottom: 70px ;
+
+}
+.FBDown p{
+    font-size: 2rem;
+    text-align: center;
+    color: rgba(240,128,128,0.6);
+    animation: secondMove 1s ease-in;
+}
+
+/******
+MID BLOCK
+*******/
+
+.midBlock{
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: auto;
+    grid-template-areas: "goleft goright";
+    margin: 20px;
+    gap: 10px;
+    
+}
+.izquierda{
+    grid-area: goleft;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+        "tablauno tablados"
+        "tablatres tablacuatro"
+        "unicatabla unicatabla";
+    gap:10px;
+    box-sizing: border-box;
+    background-color:#d8d7d7;
+    padding: 10px;
+}
+.izA{
+    grid-area: tablauno;
+    background-color: #d8d7d7;
+    height: fit-content;
+}
+.izB{
+    grid-area: tablados;
+    width: 100%;
+}
+.izC{
+    grid-area: tablatres;
+}
+.izD{
+    grid-area: tablacuatro;
+}
+.izE{
+    grid-area: unicatabla;
+    font-size: 1.3rem;
+    padding: 10px
+}
+.derecha{
+    grid-area: goright;
+    background-color: #d8d7d7;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    
+}
+.Up{
+    padding:  10px;
+    font-size: 1.5rem;
+}
+.down{
+    font-size: 1.3rem;
+}
+.cultura{
+    background-color: #f5f1f1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: 
+        "thephoto"
+        "thetitle"
+        "thetext"
+        "thelink";
+    
+}
+.moreCultura:hover{
+    color: #f08080;
+    cursor: pointer;  
+}
+.fotoArbol{
+    grid-area: thephoto;
+    width: cover;
+    margin: 10px 10px 0px 10px;
+}
+.tituloCultura{
+    grid-area: thetitle;
+    
+    color:white;
+    background-color: #f08080;
+    padding-top: 15px;
+    height: fit-content;
+    margin: 0px 10px 0px 10px;
+    padding-left: 5px;
+    font-size: 2rem;
+    
+}
+.textoCultura{
+    grid-area: thetext;
+    column-count:2;
+    margin: 15px;
+    color: #808080;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
+    height: fit-content;
+}
+.moreCultura{
+    grid-area: thelink;
+    margin: 15px;
+    color: #808080;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+}
+img{
+    width: 100%;
+    
+}
+
+/*******
+    BOTTOM
+    *******/
+
+.bottom{
+    background-color: #f5f1f1;
+    font-family: 'Roboto', sans-serif;
+    color: #808080;
+    font-size: 1.4rem;
+    margin-top: 20px;
+    border-left: 15px solid #d8d7d7;
+    border-right: 15px solid #d8d7d7;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+@keyframes firstMove{
+    0%{
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes secondMove{
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100%{
+        opacity: 0.6;
+        transform: translate(0);
+    }
+}
+
+
+/***********
+    MEDIA QUERIES
+    **************/
+
+
+
+@media screen and (max-width: 768px){
+
+
+.midBlock{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+        "goleft"
+        "goright";
+    margin: 20px;
+    gap: 10px;
+    max-width: 768px;   
+}
+.a img{
+    width: 5em; 
+}
+.b{
+    font-size: 1rem;
+}
+.b ul li{
+    padding-right: 20px;
+    font-size: 1rem;
+}
+.c i{
+    font-size: 1.4rem;
+    padding-right: 0px;
+    padding-left: 15px;
+}
+.textoCultura, .izE, .down, .moreCultura{
+    font-size: 1rem;
+}
+.tituloCultura, .FBDown p{
+    font-size: 1.4rem;
+    padding-top:40px;
+}
+}
+
+@media screen and (max-width: 426px) {
+
+.midBlock{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+        "goleft"
+        "goright";
+    margin: 20px;
+    gap: 10px;
+    max-width: 425px;   
+}
+.izquierda{
+    grid-area: goleft;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: 
+        "tablauno"
+        "tablados"
+        "tablatres" 
+        "tablacuatro"
+        "unicatabla";
+    gap:10px;
+    box-sizing: border-box;
+    background-color:#d8d7d7;
+    padding: 10px;
+}
+.firstBlock{
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(3, auto) ;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: 
+        ". pagoda ."
+        ". lista ."
+        ". linkos ."
+        ". frase .";
+      
+}
+.a{
+    text-align: center;
+}
+.a img{
+    width: 3em; 
+}
+.c{
+    justify-content: center; 
+    width: 100%;
+    
+
+    
+}
+.c i{
+    padding: 10px;
+    font-size: 1.4rem;
+
+}
+ul{
+    margin: 0px ;
+}
+.b ul li{
+    padding-right: 12px;
+    font-size: 0.9rem;
+}
+.b ul li i{
+    padding-right: 5px;
+}
+.FBDown p{
+    font-size: 1.4rem;
+    
+}
+.FBDown{
+    padding-bottom: 50px;
+    margin: 50px 30px 0px 30px;
+}
+}
